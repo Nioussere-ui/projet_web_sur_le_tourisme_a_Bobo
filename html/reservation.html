@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation d'hotel</title>
+    <link rel="stylesheet" href="../css/reservation.css">
+</head>
+<body>
+    
+     
+   
+    <header>
+    <div class="logo">
+        <img src="../assets/images/LOGON.jpg" alt="LOGO">
+        <div>
+            <h2>BOBO-DIOULASSO Tourisme</h2>
+        </div>
+    </div>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html" >Accueil</a>
+        <a href="patrimoine.html">Patrimoine</a>
+        <a href="reservation.html" class="active">Réservation</a>
+        <a href="galerie.html">Galerie</a>
+    </nav>
+</header>
+
+    <section class="hero">
+        <h1>RESERVATION D'HOTEL</h1>
+        </section>
+    <section class="reservation">
+        <h2>Réservez votre séjour à Bobo-Dioulasso</h2>
+        <fieldset>
+            <legend>Formulaire de réservation</legend>
+            <div class="ligne">
+                <div>
+                    <label>Nom</label>
+                    <input type="text" placeholder="Votre nom">
+                </div>
+            </div>
+            <div class="ligne">
+                <div>
+                    <label>Prénom</label>
+                    <input type="text" placeholder="Votre prénom">
+                </div>
+            </div>
+            <div class="ligne">
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="Votre adresse email">
+                </div>
+            </div>
+                <div class="ligne">
+                    <div>
+                        <label>Numéro de téléphone</label>
+                        <input type="tel" placeholder="+226">
+                    </div>
+            <label>Nationalité</label>
+            <select>
+                <option value="burkina_faso">Burkinabé</option>
+                <option value="france">ivoirien</option>
+                <option value="other">malien</option>
+                <option value="other">autre</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Détails de la réservation</legend>
+            <label >Date d'arrivée</label>
+            <input type="date">
+            <label>Date de départ</label>
+            <input type="date">
+            <label>Nombre de personnes</label>
+            <input type="number" min="1" max="10" value="1">
+            <label>Type de chambre</label>
+            <select>
+                
+                <option value="standard">Standard</option>
+                <option value="deluxe">double</option>
+                <option value="deluxe">suite</option>
+                <option value="suite">VIP</option>
+            </select>
+            <h3>CHOISISSEZ VOTRE HOTEL</h3>
+            <div class="hotel-list">
+                <label class="hotel-card">
+                    <input type="radio" name="hotel" value="hotel Sissiman" onchange="afficherChambreDisponibles()">
+                    <img src="../assets/images/sissiman.JPG" alt="Hotel 2">
+                    <h4>Hotel Sissiman</h4>
+                    <p>Un hôtel de charme offrant une expérience authentique au cœur de Bobo-Dioulasso.</p>
+                </label>
+                <label class="hotel-card">
+                    <input type="radio" name="hotel" value="hotel l'auberge  onchange="afficherChambreDisponibles()">
+                    <img src="../assets/images/hatel.JPG" alt="Hotel l'auberge">
+                    <h4>Hotel l'auberge </h4>
+                    <p>Un hôtel confortable et abordable </p>
+                </label>
+                <label class="hotel-card">
+                    <input type="radio" name="hotel" value="hotel Dioulasso-ba onchange="afficherChambreDisponibles()">
+                    <img src="../assets/images/t.jpg" alt="Hotel Dioulasso-ba">
+                    <h4>Hotel Dioulasso-ba</h4>
+                    <p>Un hôtel de charme offrant une expérience authentique au cœur de Bobo-Dioulasso.</p>
+                </label>
+              
+               <label class="hotel-card">
+                    <input type="radio" name="hotel" value="Villa Rose onchange="afficherChambreDisponibles()">
+                    <img src="../assets/images/mermoz-hotel.jpg" alt="Hotel mermoz">
+                    <h4>Hotel Mermoz</h4>
+                       <p>l'hotel qui vous offre des moments exceptionnels qui vous fait vous sentir dans un palais</p>
+                </label>
+                
+              
+             <label class="hotel-card">
+                    <input type="radio" name="hotel" value="Villa Roseonchange="afficherChambreDisponibles()">
+                    <img src="../assets/images/villa.jpg" alt="Hotel mermoz">
+                    <h4>Vila Rose</h4>
+                       <p>l'hotel qui vous fait vous sentir chez vous ,un cadre parfait pour emerveiller votre sejour</p>
+                </label>
+                
+            
+            
+            
+            
+            </div>
+           
+           <div id="section-chambres-dynamique" style="display:none; margin-top: 30px;">
+                <h3 id="titre-chambres">CHAMBRES DISPONIBLES</h3>
+                <div class="chambres-grid" id="conteneur-chambres">
+                    </div>
+            </div>
+
+            <div id="resume"style="display:none;"></div>
+        </fieldset>
+        
+        <button type="button" onclick="afficherResume()">Réserver</button>
+        <div id="messageReservation" class="message-reservation">
+    
+</div>
+    </section>
+    
+
+<footer>
+        <div class="footer-container">
+            <div class="footer-cool"><h3>📍 Bobo-dioulasso Tourisme</h3>
+                <p>Decouvrez Bobo-Dioulasso ,ville
+                   touristique et capital economique
+                    du BURKINA FASO</p>
+            </div>
+            <div class="footer-cool">
+                <h3>NAVIGATION</h3>
+                <ul>
+                    <li><a href="index.html">accueil</a></li>
+                    <li><a href="patrimoine.html">patrimoine</a></li>
+                    <li><a href="reservation.html">reservation</a></li>
+                    <li><a href="galerie.html">galerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-cool">
+                <h3>CONTACT</h3>
+                <p>📍 Bobo-dioulasso,BURKINA FASO</p>
+                <p>📞 +22606203040</p>
+                <p>✉️ contact@tourisme.com</p>
+            </div>
+        </div>
+            <div class="copyright">
+                    © 2026 Office du Tourisme.
+
+            </div>
+
+        
+
+    </footer>
+    
+   
+          
+
+            
+
+ <script>
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+</script>
+
+
+
+<script>
+function afficherResume(){
+
+    const message =
+    document.getElementById("messageReservation");
+
+    message.style.display = "block";
+
+    setTimeout(function(){
+        message.style.display = "none";
+    }, 5000);
+}
+</script>
+            
+
+
+<script>
+function afficherResume() {
+
+    let nom = document.querySelector('input[type="text"]').value;
+    let email = document.querySelector('input[type="email"]').value;
+
+    if(nom === "" || email === ""){
+        alert("Veuillez remplir tous les champs obligatoires.");
+        return;
+    }
+
+    let resume = document.getElementById("resume");
+
+    resume.innerHTML = `
+        <div class="message-success">
+            <strong>Réservation envoyée avec succès !</strong><br>
+            Le paiement s'effectuera à la réception lors de votre arrivée.
+        </div>
+    `;
+
+    resume.style.display = "block";
+
+    setTimeout(() => {
+        resume.style.display = "none";
+    }, 5000);
+}
+</script>
+            
+    
+
+    
+</body>
+</html>              
+
+

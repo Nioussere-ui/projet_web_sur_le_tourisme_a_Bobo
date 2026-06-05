@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+    <header>
+    <div class="logo">
+        <img src="../assets/images/LOGON.jpg" alt="LOGO">
+        <div>
+            <h2>BOBO-DIOULASSO Tourisme</h2>
+        </div>
+    </div>
+    <button clASS="menu-toggle" id="menuToggle">☰</button>
+    <nav class="nav-menu" id="navMenu">
+        <a href="index.html">Accueil</a>
+        <a href="patrimoine.html" >Patrimoine</a>
+        <a href="reservation.html">Réservation</a>
+        <a href="galerie.html" class="active">Galerie</a>
+    </nav>
+</header>
+
+<section class="galerie">
+    
+    <img src="../assets/images/m1.jpg" alt=" La vieille Mosquée">
+    <img src="../assets/images/m2.jpg" alt="mosque">
+    
+    
+        <img src="../assets/images/s2.jpg" alt="silure">
+        <img src="../assets/images/s1.jpg" alt="Les sillures sacrées de Dafra">
+    
+    
+         <img src="../assets/images/g1.jpg" alt="Le mausolée de Guimbi ouattara">
+        <img src="gim.jpg" alt="mausole">
+        
+    
+        <img src="../assets/images/q1.jpg" alt="Le vieux quartier de Dioulasso-ba">
+        <img src="../assets/images/q2.jpg" alt="quartier">
+    
+    
+        <img src="../assets/images/cat.jpg" alt="La cathédrale">
+        <img src="../assets/images/c2.jpg" alt="mausole">
+     
+     
+        <img src="../assets/images/h1.jpg" alt="La marre aux hippopotames">
+        <img src="../assets/images/ma.jpg" alt="mausole">    
+    
+          <img src="../assets/images/se.jpg" alt="Le centre culturel senoufo Rene-Fournier">
+        <img src="../assets/images/se1.jpg" alt="mausole">
+        
+        
+         <img src="../assets/images/so1.jpg" alt="Le musee communal sogossira sanon">
+         <img src="koro2.jpg" alt="mausole">
+        
+
+        
+         <img src="../assets/images/ro.jpg" alt="Le village de koro">
+         <img src="../assets/images/ro1.jpg" alt="mausole">
+        
+    
+        
+        
+        <img src="../assets/images/fo.jpg" alt="La forêt classée du kou">
+        <img src="../assets/images/fo1.jpg" alt="mausole">
+        
+       </section>
+
+<div id="lightbox" class="lightbox">
+    <span id="closeBtn">&times;</span>
+    <img id="lightboxImg">
+</div> 
+        
+
+<footer>
+        <div class="footer-container">
+            <div class="footer-cool"><h3>📍 Bobo-dioulasso Tourisme</h3>
+                <p>Decouvrez Bobo-Dioulasso ,ville
+                   touristique et capital economique
+                    du BURKINA FASO</p>
+            </div>
+            <div class="footer-cool">
+                <h3>NAVIGATION</h3>
+                <ul>
+                    <li><a href="index.html">accueil</a></li>
+                    <li><a href="patrimoine.html">patrimoine</a></li>
+                    <li><a href="reservation.html">reservation</a></li>
+                    <li><a href="galerie.html">galerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-cool">
+                <h3>CONTACT</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Bobo-dioulasso,BURKINA FASO</p>
+                <P><i class="fas fa-phone"></i> +22606203040</P>
+                <P><i class="fas fa-envelope"></i>contact@tourisme.com</P>
+            </div>
+        </div>
+            <DIV class="copyright">
+                    © 2026 Office du Tourisme.
+
+            </DIV>
+
+        
+
+    </footer>
+     <script>
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+</script>
+<script>
+const images = document.querySelectorAll(".galerie img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const closeBtn = document.getElementById("closeBtn");
+
+images.forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if(e.target === lightbox){
+        lightbox.style.display = "none";
+    }
+});
+</script>
+   
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #070606;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1e1a17;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+.logo h2{
+    color: #df8611;
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #df8611;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #df8611;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active{
+    background-color: #df8611;
+    color: white;
+}
+
+.galerie{
+    flex: 1;   
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.galerie img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+footer{
+    background: #955a03;
+    color: #100a00;
+    margin-top: auto; 
+    padding: 20px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-cool{
+    width: 30%;
+}
+
+.copyright{
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #000;
+}
+
+@media (max-width: 768px){
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .nav-menu{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #111;
+    }
+
+    .nav-menu.active{
+        display: flex;
+    }
+
+    .galerie{
+        grid-template-columns: 1fr;
+    }
+}

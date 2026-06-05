@@ -1,0 +1,152 @@
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background: #090909;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(215, 144, 51);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #e6e9da;
+}
+
+.menu-toggle.active {
+    color: #e6e9da;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.logo h2 {
+    color: rgb(234, 127, 50);
+    font-size: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: rgb(215, 144, 51);
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu a.active {
+    color: #e6e9da;
+    background-color: #df8611;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    color: #e6e9da;
+    background-color: #df8611;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #090909;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #333;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo h2 {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        top: 55px;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        padding: 10px 10px;
+    }
+
+    .logo h2 {
+        font-size: 12px;
+    }
+}

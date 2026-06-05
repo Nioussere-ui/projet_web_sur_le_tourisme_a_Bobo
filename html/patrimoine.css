@@ -1,0 +1,242 @@
+﻿body{
+    margin: 0;
+    font-family: Arial;
+    background-color: #070606;
+    padding-top: 70px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1e1a17;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.top-bar{
+    padding: 10px;
+    background: #e0711b;
+}
+.btn-retour{
+    padding: 8px 15px;
+    background:rgb(47, 50, 47);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #1d1d1d;
+    z-index: 1000;
+}
+.btn-nav{
+    padding: 8px 15px;
+    background: #252524;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.hero {
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("BOBO.jpg.jpeg");
+     height: 400px;
+     width: 100%;
+     background-position: center;
+     background-size: cover;
+     position: relative;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+}
+.hero-text{
+
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    bottom: 20px;
+    color: #e7885c;
+    padding: 10px;
+}
+.sites{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.card{
+    background: #e37835;
+    text-align: center;
+    border: 1px solid #1d1a1a;
+    padding: 20px;
+}
+.card img{
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+.card h2{
+    margin: 10px 0;
+}
+.card p{
+    padding: 0 10px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #bb520c;
+    color: #131212;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+.btn:hover{
+    background: #dc9a3c;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+.logo h2 {
+    color: rgb(234, 127, 50);
+    }
+nav  {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+nav a {
+    color: rgb(215, 144, 51);
+    text-decoration: none;
+
+    padding: 10px;
+}
+nav a.active {
+    color: #e6e9da;
+    background-color: #df8611;
+    border-radius: 5px;
+}
+footer{
+    background-color: #B8860B;
+}
+
+footer{
+    background:#955a03;
+    color:rgb(22, 15, 1);
+    margin-top:50px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.footer-cool{
+    width:30%;
+}
+
+.footer-cool h3{
+    color:#eda90ce4;
+    margin-bottom:15px;
+}
+
+.footer-cool p,
+.footer-cool a{
+    color:rgb(19, 8, 1);
+    text-decoration:none;
+    line-height:1.8;
+}
+
+.footer-cool ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-cool a:hover{
+    color:#151001;
+}
+
+.copyright{
+    text-align:center;
+    padding:15px;
+    border-top:1px solid #100f0e;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1e1a17;
+    position: relative;
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #df8611;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #df8611;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover{
+    background-color: #df8611;
+    color: white;
+}
+
+.nav-menu a.active{
+    background-color: #df8611;
+    color: white;
+}
+
+@media (max-width: 768px){
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .nav-menu{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #111;
+        padding: 15px 0;
+    }
+
+    .nav-menu.active{
+        display: flex;
+    }
+
+    .nav-menu a{
+        padding: 15px;
+        border-bottom: 1px solid #333;
+        border-radius: 0;
+    }
+}

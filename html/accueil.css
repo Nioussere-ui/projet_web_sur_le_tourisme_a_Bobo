@@ -1,0 +1,384 @@
+﻿
+@import url('header.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e1a17;
+    padding-top: 70px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: rgb(215, 144, 51);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #bb520c;
+    color: #131212;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background: #dc9a3c;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.logo h2 {
+    color: rgb(234, 127, 50);
+    font-size: 20px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: rgb(215, 144, 51);
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-menu a.active {
+    color: #e6e9da;
+    background-color: #df8611;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    color: #e6e9da;
+    background-color: #df8611;
+    border-radius: 5px;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url("../assets/images/BOBO.jpg");
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenu {
+    max-width: 60%;
+    margin-left: 60px;
+    margin-top: 5em;
+    color: #ede3e3;
+}
+
+.slogan {
+    display: flex;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #c87b00;
+}
+
+h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    display:inline;
+}
+
+h2 span {
+    color: #c87b00;
+}
+
+.contenu p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    font-size: 18px !important;
+    margin-bottom: 7em;
+}
+
+.bnt{
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    background-color: #70b8d9;
+    color: rgb(201, 112, 17);
+}
+
+.bas_image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #f47227;
+    margin-top:0;
+    color: #524646;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #f4ebeb;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #333;
+    }
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+    .hero {
+        background-attachment: scroll;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .contenu {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .slogan {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .contenu p {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo h2 {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 80vh;
+        padding: 40px 15px;
+        align-items: center;
+    }
+
+    .contenu {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .slogan {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    .contenu p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        font-size: 13px !important;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        margin: 8px 5px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    header {
+        padding: 10px 10px;
+    }
+
+    .logo h2 {
+        display: none;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 30px 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .slogan {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .contenu p {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .contenu p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+footer{
+    background-color: #B8860B;
+}
+footer{
+    background:#955a03;
+    color:rgb(22, 15, 1);
+    margin-top:50px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.footer-cool{
+    width:30%;
+}
+
+.footer-cool h3{
+    color:#eda90ce4;
+    margin-bottom:15px;
+}
+
+.footer-cool p,
+.footer-cool a{
+    color:rgb(19, 8, 1);
+    text-decoration:none;
+    line-height:1.8;
+}
+
+.footer-cool ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-cool a:hover{
+    color:#151001;
+}
+
+.copyright{
+    text-align:center;
+    padding:15px;
+    border-top:1px solid #100f0e;
+}

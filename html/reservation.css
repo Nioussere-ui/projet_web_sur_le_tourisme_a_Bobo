@@ -1,0 +1,276 @@
+﻿
+@import url('header.css');
+
+body{
+background-color: #1e1a17;
+color: white;
+font-family: Arial,sans-serif;
+margin: 0;
+padding: 70px 0 0 0;
+}
+fieldset{
+width: 80%;
+margin: 30px auto;
+padding: 25px;
+border: 2px solid#b88b4a;
+border-radius:10px ;
+background: color #2b2622 ;
+}
+legend{
+color: #f1c56b;
+font-size: 22px;
+font-weight: bold;
+}
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+input,select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b88b4a;
+    border-radius: 5px;
+    background-color: #b88b4a;
+    color: white;
+    box-sizing: border-box;
+}
+input:focus,select:focus{
+outline: none;
+border-color:#f1c56b ;
+}
+h3{
+color:#f1c56b;
+margin-top:25px ;
+text-align: center;
+}
+.hotel-list{
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+.hotel-card{
+width: 220px;
+background-color: #3b342f;
+border: 2px solid #b88b4a;
+border-radius: 10px;
+padding: 10px;
+text-align: center;
+cursor:pointer;
+transition: 0.3s;
+}
+.hotel-card img{
+width: 100%;
+height: 150px;
+object-fit: cover;
+border-radius: 8px;
+}
+.hotel-card p{
+margin-top:10px ;
+font-weight: bold;
+}
+button{
+display: block;
+margin: 25px auto;
+padding: 12px 30px;
+background-color: #d4a54a;
+color: black;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+button:hover{
+background-color: #f1c56b;
+}
+#resume{
+width: 80%;
+margin: 20px auto;
+padding: 15px;
+border-radius: 10px;
+background-color: #2b2622;
+color: 1px solid#b88b4a;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+.logo h2 {
+    color: rgb(234, 127, 50);
+    }
+nav  {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+nav a {
+    color: rgb(215, 144, 51);
+    text-decoration: none;
+
+    padding: 10px;
+}
+nav a.active {
+    color: #e6e9da;
+    background-color: #df8611;
+    border-radius: 5px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #bb520c;
+    color: #131212;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+.btn:hover{
+    background: #dc9a3c;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #bb520c;
+    color: #131212;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+.btn:hover{
+    background: #dc9a3c;
+}
+footer{
+    background-color: #B8860B;
+}
+footer{
+    background:#955a03;
+    color:rgb(22, 15, 1);
+    margin-top:50px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.footer-cool{
+    width:30%;
+}
+
+.footer-cool h3{
+    color:#eda90ce4;
+    margin-bottom:15px;
+}
+
+.footer-cool p,
+.footer-cool a{
+    color:rgb(19, 8, 1);
+    text-decoration:none;
+    line-height:1.8;
+}
+
+.footer-cool ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-cool a:hover{
+    color:#151001;
+}
+
+.copyright{
+    text-align:center;
+    padding:15px;
+    border-top:1px solid #100f0e;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1e1a17;
+    position: relative;
+}
+
+/* Bouton hamburger */
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #df8611;
+    cursor: pointer;
+}
+
+/* MENU NORMAL (desktop) */
+.nav-menu{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #df8611;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Effet bouton */
+.nav-menu a:hover{
+    background-color: #df8611;
+    color: white;
+}
+
+/* Page active */
+.nav-menu a.active{
+    background-color: #df8611;
+    color: white;
+}
+
+
+@media (max-width: 768px){
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .nav-menu{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #111;
+        padding: 15px 0;
+    }
+    .message-reservation{
+    display:none;
+    margin-top:20px;
+    padding:15px;
+    background:#d4edda;
+    color:#155724;
+    border-radius:8px;
+    text-align:center;
+    font-weight:bold;
+}
+.message-success{
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
